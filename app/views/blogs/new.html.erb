@@ -1,0 +1,21 @@
+<h1><%= @blog.id ? 'Edit Blog' : 'Create Blog' %></h1>
+<hr />
+<%= form_for @blog do |f| %>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+    <br>
+    <br>
+      <%= f.label :title %>
+  <%= f.text_field :title %>
+    <br>
+    <br>
+      <%= f.label :body %>
+  <%= f.text :body %>
+   <br>
+    <br>
+  <%= f.submit %>
+<% end %>
+
+<p>
+<%= link_to 'Back', root_path%>
+</p>
