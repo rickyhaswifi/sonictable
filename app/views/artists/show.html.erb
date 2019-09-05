@@ -1,0 +1,16 @@
+<div class="chart-header">
+<h1><%= @artist.name %></h1>
+<h2>Song Details</h2>
+</div>
+
+<div class="card mb-3">
+<p>
+<%= link_to 'Add a Song', new_artist_song_path(@artist) %> 
+</p>
+
+</div>
+
+
+<p>
+<%= link_to 'Back', root_path%>
+</p>

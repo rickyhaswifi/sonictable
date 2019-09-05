@@ -1,0 +1,17 @@
+<h1>Add a chart</h1>
+<h1><%= @chart.id ? 'Edit chart' : 'Create chart'%> </h1>
+
+<%= form_for @chart do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    
+    <%= f.submit%>
+<% end%>
+
+
+<hr>
+
+<button>
+<%= link_to 'Cancel', root_path%>
+</button>

@@ -1,0 +1,20 @@
+<h1><%= @song.id ? 'Edit Song' : 'Create Song' %></h1>
+<hr />
+<%= form_for [@artist, @song] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true, autofocus: true %>
+    <br />
+    <br />
+  <%= f.label :album %>
+  <%= f.text_field :album, required: true %>
+    <br />
+    <br />
+  <%= f.label :genre %>
+  <%= f.text_field :genre, required: true %>
+    <br />
+    <br />
+      <%= f.label :chart %>
+  <%= f.select :chart_id, @charts.collect { |c| [c.title, c.id]} %>
+
+  <%= f.submit %>
+<% end %>

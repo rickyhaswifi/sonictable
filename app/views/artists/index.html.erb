@@ -1,0 +1,9 @@
+<h1>Artists</h1>
+<h2><%= @artists.length <= 0 ? "No Artists" : '' %></h2>
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <%= link_to artist.name, artist %> |  <%= link_to 'Edit', edit_artist_path(artist) %>
+    </li>
+  <% end %>
+</ul>
