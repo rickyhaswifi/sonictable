@@ -4,6 +4,15 @@
 </div>
 
 <div class="card mb-3">
+
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li>
+      <%= link_to song.title, artist_songs_path(song) %>
+    </li>
+  <% end %>
+</ul>
+
 <p>
 <%= link_to 'Add a Song', new_artist_song_path(@artist) %> 
 </p>

@@ -38,7 +38,7 @@ class ChartsController < ApplicationController
 
   def destroy
     @chart.destroy
-    redirect_to songs_path
+    redirect_to root_path
   end
 
   private
