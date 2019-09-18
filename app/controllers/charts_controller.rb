@@ -7,6 +7,7 @@ class ChartsController < ApplicationController
   end
 
   def show
+    # @charts = @chart.artists.all
   end
 
   def new
@@ -49,7 +50,5 @@ class ChartsController < ApplicationController
   def set_chart
     @chart = Chart.find(params[:id])
   end 
-
-
   
 end
